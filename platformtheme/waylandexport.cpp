@@ -2,7 +2,7 @@
 
 #include <QWindow>
 
-#ifdef CUTEFISH_PLATFORMTHEME_WAYLAND
+#ifdef PROPERDESKTOP_PLATFORMTHEME_WAYLAND
 
 #include <QGuiApplication>
 #include <qguiapplication_platform.h>

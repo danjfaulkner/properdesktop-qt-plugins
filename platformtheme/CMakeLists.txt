@@ -50,22 +50,22 @@ if(WaylandClient_FOUND AND WaylandProtocols_FOUND)
         ${THEME_PROTOCOL_DIR}/xdg-foreign-unstable-v2-client-protocol.h)
 endif()
 
-add_library(cutefishplatformtheme MODULE ${SRCS})
+add_library(properdesktopplatformtheme MODULE ${SRCS})
 
 if(WaylandClient_FOUND AND WaylandProtocols_FOUND)
-    target_compile_definitions(cutefishplatformtheme PRIVATE CUTEFISH_PLATFORMTHEME_WAYLAND)
-    target_include_directories(cutefishplatformtheme PRIVATE ${THEME_PROTOCOL_DIR})
-    target_link_libraries(cutefishplatformtheme PRIVATE PkgConfig::WaylandClient)
+    target_compile_definitions(properdesktopplatformtheme PRIVATE PROPERDESKTOP_PLATFORMTHEME_WAYLAND)
+    target_include_directories(properdesktopplatformtheme PRIVATE ${THEME_PROTOCOL_DIR})
+    target_link_libraries(properdesktopplatformtheme PRIVATE PkgConfig::WaylandClient)
 endif()
 
-target_compile_definitions(cutefishplatformtheme
+target_compile_definitions(properdesktopplatformtheme
     PRIVATE
         "QT_NO_FOREACH"
 )
 
-target_link_libraries(cutefishplatformtheme PRIVATE
-    Cutefish::Scrolling
-    Cutefish::ScrollingWidgets
+target_link_libraries(properdesktopplatformtheme PRIVATE
+    ProperDesktop::Scrolling
+    ProperDesktop::ScrollingWidgets
     Qt6::GuiPrivate
     Qt6::Widgets
     Qt6::Core
@@ -81,7 +81,7 @@ else()
     message(FATAL_ERROR "Qt6 plugin directory cannot be detected.")
 endif()
 
-install(TARGETS cutefishplatformtheme LIBRARY DESTINATION "${QT_PLUGINS_DIR}/platformthemes")
+install(TARGETS properdesktopplatformtheme LIBRARY DESTINATION "${QT_PLUGINS_DIR}/platformthemes")
 
 if(BUILD_TESTING)
     add_subdirectory(tests)

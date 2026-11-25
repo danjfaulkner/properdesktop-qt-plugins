@@ -1,8 +1,8 @@
 // SPDX-FileCopyrightText: 2026 Reion Wong <reionwong@gmail.com>
 // SPDX-License-Identifier: BSD-3-Clause
 
-#ifndef CUTEFISH_SCROLLER_H
-#define CUTEFISH_SCROLLER_H
+#ifndef PROPERDESKTOP_SCROLLER_H
+#define PROPERDESKTOP_SCROLLER_H
 
 #include <QList>
 #include <QObject>
@@ -13,7 +13,7 @@
 class QWheelEvent;
 class QWindow;
 
-namespace Cutefish {
+namespace ProperDesktop {
 
 class ScrollFrames;
 
@@ -140,6 +140,6 @@ private:
     friend class ScrollFrames;
 };
 
-} // namespace Cutefish
+} // namespace ProperDesktop
 
-#endif // CUTEFISH_SCROLLER_H
+#endif // PROPERDESKTOP_SCROLLER_H

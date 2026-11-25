@@ -164,7 +164,7 @@ bool FileDialogHelper::show(Qt::WindowFlags flags, Qt::WindowModality modality, 
     const bool directoryMode = dialogOptions->fileMode() == QFileDialogOptions::Directory
             || dialogOptions->fileMode() == QFileDialogOptions::DirectoryOnly;
 
-    const QString token = QStringLiteral("cutefish%1").arg(QRandomGenerator::global()->generate());
+    const QString token = QStringLiteral("properdesktop%1").arg(QRandomGenerator::global()->generate());
     QVariantMap portalOptions;
     portalOptions.insert(QStringLiteral("handle_token"), token);
     portalOptions.insert(QStringLiteral("modal"), modality != Qt::NonModal);

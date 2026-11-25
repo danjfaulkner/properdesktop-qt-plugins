@@ -1,8 +1,8 @@
 // SPDX-FileCopyrightText: 2026 Reion Wong <reionwong@gmail.com>
 // SPDX-License-Identifier: BSD-3-Clause
 
-#ifndef CUTEFISH_QUICKSCROLLING_H
-#define CUTEFISH_QUICKSCROLLING_H
+#ifndef PROPERDESKTOP_QUICKSCROLLING_H
+#define PROPERDESKTOP_QUICKSCROLLING_H
 
 #include <QHash>
 #include <QObject>
@@ -13,7 +13,7 @@ class QQuickItem;
 class QQuickWindow;
 class QWheelEvent;
 
-namespace Cutefish {
+namespace ProperDesktop {
 
 class FlickableScroller;
 
@@ -54,9 +54,9 @@ private:
     friend class QuickScrollingSingleton;
 };
 
-} // namespace Cutefish
+} // namespace ProperDesktop
 
 // For loading the library at run time: turns automatic scrolling on.
-extern "C" Q_DECL_EXPORT void cutefish_scrolling_quick_set_automatic();
+extern "C" Q_DECL_EXPORT void properdesktop_scrolling_quick_set_automatic();
 
-#endif // CUTEFISH_QUICKSCROLLING_H
+#endif // PROPERDESKTOP_QUICKSCROLLING_H

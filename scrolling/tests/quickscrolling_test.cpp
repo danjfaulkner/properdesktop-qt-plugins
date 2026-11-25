@@ -11,8 +11,8 @@
 #include <QWheelEvent>
 #include <private/qquickflickable_p.h>
 
-using Cutefish::QuickScrolling;
-using Cutefish::Scroller;
+using ProperDesktop::QuickScrolling;
+using ProperDesktop::Scroller;
 
 static qreal now = 0;
 

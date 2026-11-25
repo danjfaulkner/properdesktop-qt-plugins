@@ -11,8 +11,8 @@
 #include <QTest>
 #include <QWheelEvent>
 
-using Cutefish::Scroller;
-using Cutefish::WidgetScrolling;
+using ProperDesktop::Scroller;
+using ProperDesktop::WidgetScrolling;
 
 static qreal now = 0;
 

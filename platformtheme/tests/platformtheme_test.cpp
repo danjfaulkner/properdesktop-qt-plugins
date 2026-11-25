@@ -132,7 +132,7 @@ private:
 static bool writeSettings(const QByteArray &contents)
 {
     const QString directory =
-            QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + "/cutefish";
+            QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + "/properdesktop";
     QFile file(directory + "/services.conf");
     return QDir().mkpath(directory) && file.open(QIODevice::WriteOnly | QIODevice::Truncate)
         && file.write(contents) == contents.size();

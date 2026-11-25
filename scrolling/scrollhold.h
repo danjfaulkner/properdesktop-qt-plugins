@@ -1,8 +1,8 @@
 // SPDX-FileCopyrightText: 2026 Reion Wong <reionwong@gmail.com>
 // SPDX-License-Identifier: BSD-3-Clause
 
-#ifndef CUTEFISH_SCROLLHOLD_H
-#define CUTEFISH_SCROLLHOLD_H
+#ifndef PROPERDESKTOP_SCROLLHOLD_H
+#define PROPERDESKTOP_SCROLLHOLD_H
 
 #include <QObject>
 
@@ -14,7 +14,7 @@ struct wl_surface;
 struct zwp_pointer_gesture_hold_v1;
 struct zwp_pointer_gestures_v1;
 
-namespace Cutefish {
+namespace ProperDesktop {
 
 // Fingers resting on the touchpad stop the coasts in the window under the
 // pointer, before they move far enough to start a scroll.
@@ -44,6 +44,6 @@ private:
     uint32_t m_name = 0;
 };
 
-} // namespace Cutefish
+} // namespace ProperDesktop
 
-#endif // CUTEFISH_SCROLLHOLD_H
+#endif // PROPERDESKTOP_SCROLLHOLD_H

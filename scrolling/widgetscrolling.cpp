@@ -13,7 +13,7 @@
 #include <QTextEdit>
 #include <QWheelEvent>
 
-namespace Cutefish {
+namespace ProperDesktop {
 
 static WidgetScrolling *instance = nullptr;
 
@@ -90,4 +90,4 @@ bool WidgetScrolling::eventFilter(QObject *watched, QEvent *event)
     return true;
 }
 
-} // namespace Cutefish
+} // namespace ProperDesktop

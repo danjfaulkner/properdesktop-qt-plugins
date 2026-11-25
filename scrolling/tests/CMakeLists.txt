@@ -7,7 +7,7 @@ set(scrolling_test_environment
 
 add_executable(scrolling-quick-test quickscrolling_test.cpp)
 target_link_libraries(scrolling-quick-test PRIVATE
-    Cutefish::ScrollingQuick
+    ProperDesktop::ScrollingQuick
     Qt6::Qml
     Qt6::QuickPrivate
     Qt6::Test
@@ -16,6 +16,6 @@ add_test(NAME scrolling-quick-test COMMAND scrolling-quick-test)
 set_tests_properties(scrolling-quick-test PROPERTIES ENVIRONMENT "${scrolling_test_environment}")
 
 add_executable(scrolling-widgets-test widgetscrolling_test.cpp)
-target_link_libraries(scrolling-widgets-test PRIVATE Cutefish::ScrollingWidgets Qt6::Test)
+target_link_libraries(scrolling-widgets-test PRIVATE ProperDesktop::ScrollingWidgets Qt6::Test)
 add_test(NAME scrolling-widgets-test COMMAND scrolling-widgets-test)
 set_tests_properties(scrolling-widgets-test PROPERTIES ENVIRONMENT "${scrolling_test_environment}")

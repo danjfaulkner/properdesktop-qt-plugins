@@ -15,7 +15,7 @@
 #include <cmath>
 #include <limits>
 
-namespace Cutefish {
+namespace ProperDesktop {
 
 static constexpr qreal friction = 4.5;
 static constexpr qreal springFrequency = 18.0;
@@ -875,4 +875,4 @@ void Scroller::advanceAxis(qreal &position, qreal &velocity, const Axis &axis, q
     }
 }
 
-} // namespace Cutefish
+} // namespace ProperDesktop

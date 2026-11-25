@@ -12,7 +12,7 @@
 
 #include <cmath>
 
-namespace Cutefish {
+namespace ProperDesktop {
 
 ScrollAreaScroller::ScrollAreaScroller(QAbstractScrollArea *area)
     : Scroller(area)
@@ -111,4 +111,4 @@ bool ScrollAreaScroller::eventFilter(QObject *watched, QEvent *event)
     return false;
 }
 
-} // namespace Cutefish
+} // namespace ProperDesktop

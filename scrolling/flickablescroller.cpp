@@ -8,7 +8,7 @@
 #include <private/qquickflickable_p_p.h>
 #include <private/qquickitem_p.h>
 
-namespace Cutefish {
+namespace ProperDesktop {
 
 namespace {
 
@@ -118,4 +118,4 @@ bool FlickableScroller::isViewAlive() const
     return m_flickable && !QQuickItemPrivate::get(m_flickable.data())->inDestructor;
 }
 
-} // namespace Cutefish
+} // namespace ProperDesktop

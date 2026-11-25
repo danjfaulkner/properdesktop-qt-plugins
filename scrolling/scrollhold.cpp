@@ -14,7 +14,7 @@
 
 #include <cstring>
 
-namespace Cutefish {
+namespace ProperDesktop {
 
 static wl_surface *surfaceOf(QWindow *window)
 {
@@ -117,4 +117,4 @@ void ScrollHold::end(void *, zwp_pointer_gesture_hold_v1 *, uint32_t, uint32_t, 
 {
 }
 
-} // namespace Cutefish
+} // namespace ProperDesktop

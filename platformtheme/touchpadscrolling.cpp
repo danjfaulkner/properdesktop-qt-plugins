@@ -12,8 +12,8 @@
 
 void TouchpadScrolling::install()
 {
-    Cutefish::ScrollHold::watch();
-    Cutefish::WidgetScrolling::install();
+    ProperDesktop::ScrollHold::watch();
+    ProperDesktop::WidgetScrolling::install();
     new TouchpadScrolling;
 }
 
@@ -35,9 +35,9 @@ bool TouchpadScrolling::eventFilter(QObject *watched, QEvent *event)
 
 void TouchpadScrolling::loadQuickScrolling()
 {
-    QLibrary library(QStringLiteral("cutefish-qt-scrolling-quick"));
+    QLibrary library(QStringLiteral("properdesktop-qt-scrolling-quick"));
     if (auto setAutomatic = reinterpret_cast<void (*)()>(
-                library.resolve("cutefish_scrolling_quick_set_automatic")))
+                library.resolve("properdesktop_scrolling_quick_set_automatic")))
         setAutomatic();
     deleteLater();
 }

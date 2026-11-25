@@ -1,14 +1,14 @@
 // SPDX-FileCopyrightText: 2026 Reion Wong <reionwong@gmail.com>
 // SPDX-License-Identifier: BSD-3-Clause
 
-#ifndef CUTEFISH_FLICKABLESCROLLER_H
-#define CUTEFISH_FLICKABLESCROLLER_H
+#ifndef PROPERDESKTOP_FLICKABLESCROLLER_H
+#define PROPERDESKTOP_FLICKABLESCROLLER_H
 
 #include "scroller.h"
 
 class QQuickFlickable;
 
-namespace Cutefish {
+namespace ProperDesktop {
 
 // Touchpad scrolling of a Flickable, reported as Flickable movement.
 class FlickableScroller : public Scroller
@@ -33,6 +33,6 @@ private:
     QPointer<QQuickFlickable> m_flickable;
 };
 
-} // namespace Cutefish
+} // namespace ProperDesktop
 
-#endif // CUTEFISH_FLICKABLESCROLLER_H
+#endif // PROPERDESKTOP_FLICKABLESCROLLER_H

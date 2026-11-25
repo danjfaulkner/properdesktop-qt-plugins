@@ -16,7 +16,7 @@ static const QByteArray s_systemFontName = QByteArrayLiteral("Font");
 static const QByteArray s_systemFixedFontName = QByteArrayLiteral("FixedFont");
 static const QByteArray s_systemPointFontSize = QByteArrayLiteral("FontSize");
 static const QByteArray s_darkModeName = QByteArrayLiteral("DarkMode");
-static const QString s_defaultIconName = QStringLiteral("Cutefish");
+static const QString s_defaultIconName = QStringLiteral("ProperDesktop");
 
 static QString availableFontFamily(const QString &requested, const QString &fallback)
 {
@@ -41,7 +41,7 @@ static QVariantMap settingsValues(QSettings *settings)
 HintsSettings::HintsSettings(QObject *parent)
     : QObject(parent)
     , m_settings(new QSettings(QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation)
-                                       + "/cutefish/services.conf",
+                                       + "/properdesktop/services.conf",
                                QSettings::IniFormat, this))
 {
     m_settings->beginGroup("Appearance");
@@ -59,14 +59,14 @@ HintsSettings::HintsSettings(QObject *parent)
     updateCursorHints();
     for (const auto *signal : {"cursorThemeChanged", "cursorSizeChanged"})
         QDBusConnection::sessionBus().connect(
-                "org.cutefish.Services", "/org/cutefish/Services/Appearance",
-                "org.cutefish.Services.Appearance", QLatin1String(signal), this,
+                "org.properdesktop.Services", "/org/properdesktop/Services/Appearance",
+                "org.properdesktop.Services.Appearance", QLatin1String(signal), this,
                 SLOT(updateCursorHints()));
     // Delivered in order before any application-side icon reload that listens to the same
     // signal, so QIconLoader is on the new theme first whatever the file watcher does.
-    QDBusConnection::sessionBus().connect("org.cutefish.Services",
-                                          "/org/cutefish/Services/Appearance",
-                                          "org.cutefish.Services.Appearance", "iconThemeChanged",
+    QDBusConnection::sessionBus().connect("org.properdesktop.Services",
+                                          "/org/properdesktop/Services/Appearance",
+                                          "org.properdesktop.Services.Appearance", "iconThemeChanged",
                                           this, SLOT(updateIconTheme()));
 
     QMetaObject::invokeMethod(this, "lazyInit", Qt::QueuedConnection);

@@ -1,8 +1,8 @@
 // SPDX-FileCopyrightText: 2026 Reion Wong <reionwong@gmail.com>
 // SPDX-License-Identifier: BSD-3-Clause
 
-#ifndef CUTEFISH_WIDGETSCROLLING_H
-#define CUTEFISH_WIDGETSCROLLING_H
+#ifndef PROPERDESKTOP_WIDGETSCROLLING_H
+#define PROPERDESKTOP_WIDGETSCROLLING_H
 
 #include <QHash>
 #include <QObject>
@@ -10,7 +10,7 @@
 class QAbstractScrollArea;
 class QScrollBar;
 
-namespace Cutefish {
+namespace ProperDesktop {
 
 class ScrollAreaScroller;
 
@@ -39,6 +39,6 @@ private:
     QHash<QAbstractScrollArea *, ScrollAreaScroller *> m_scrollers;
 };
 
-} // namespace Cutefish
+} // namespace ProperDesktop
 
-#endif // CUTEFISH_WIDGETSCROLLING_H
+#endif // PROPERDESKTOP_WIDGETSCROLLING_H

@@ -11,7 +11,7 @@
 
 #include <utility>
 
-namespace Cutefish {
+namespace ProperDesktop {
 
 class QuickScrollingSingleton
 {
@@ -165,9 +165,9 @@ bool QuickScrolling::scrollAutomatically(QQuickFlickable *flickable, QWheelEvent
     return true;
 }
 
-} // namespace Cutefish
+} // namespace ProperDesktop
 
-void cutefish_scrolling_quick_set_automatic()
+void properdesktop_scrolling_quick_set_automatic()
 {
-    Cutefish::QuickScrolling::self()->setAutomatic(true);
+    ProperDesktop::QuickScrolling::self()->setAutomatic(true);
 }

@@ -1,8 +1,8 @@
 // SPDX-FileCopyrightText: 2026 Reion Wong <reionwong@gmail.com>
 // SPDX-License-Identifier: BSD-3-Clause
 
-#ifndef CUTEFISH_SCROLLAREASCROLLER_H
-#define CUTEFISH_SCROLLAREASCROLLER_H
+#ifndef PROPERDESKTOP_SCROLLAREASCROLLER_H
+#define PROPERDESKTOP_SCROLLAREASCROLLER_H
 
 #include "scroller.h"
 
@@ -11,7 +11,7 @@
 class QAbstractScrollArea;
 class QScrollBar;
 
-namespace Cutefish {
+namespace ProperDesktop {
 
 // Touchpad scrolling of a scroll area whose scroll bars count pixels. Past an
 // end the viewport moves away from its edge.
@@ -45,6 +45,6 @@ private:
     bool m_positioned = false;
 };
 
-} // namespace Cutefish
+} // namespace ProperDesktop
 
-#endif // CUTEFISH_SCROLLAREASCROLLER_H
+#endif // PROPERDESKTOP_SCROLLAREASCROLLER_H

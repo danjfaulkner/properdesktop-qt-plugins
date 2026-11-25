@@ -40,7 +40,7 @@ add_custom_command(OUTPUT ${pointer_gestures_code}
 set_source_files_properties(${pointer_gestures_header} ${pointer_gestures_code} PROPERTIES SKIP_AUTOGEN ON)
 
 # The physics and the hold gesture, for any kind of view.
-add_library(cutefish-qt-scrolling SHARED
+add_library(properdesktop-qt-scrolling SHARED
     scroller.cpp
     scroller.h
     scrollhold.cpp
@@ -48,14 +48,14 @@ add_library(cutefish-qt-scrolling SHARED
     ${pointer_gestures_header}
     ${pointer_gestures_code}
 )
-add_library(Cutefish::Scrolling ALIAS cutefish-qt-scrolling)
-target_include_directories(cutefish-qt-scrolling
+add_library(ProperDesktop::Scrolling ALIAS properdesktop-qt-scrolling)
+target_include_directories(properdesktop-qt-scrolling
     PUBLIC
         ${CMAKE_CURRENT_SOURCE_DIR}
     PRIVATE
         ${protocol_dir}
 )
-target_link_libraries(cutefish-qt-scrolling
+target_link_libraries(properdesktop-qt-scrolling
     PUBLIC
         Qt6::Gui
     PRIVATE
@@ -64,38 +64,38 @@ target_link_libraries(cutefish-qt-scrolling
 )
 
 # Qt Quick views. A library of its own so widget applications never load Qt Quick.
-add_library(cutefish-qt-scrolling-quick SHARED
+add_library(properdesktop-qt-scrolling-quick SHARED
     flickablescroller.cpp
     flickablescroller.h
     quickscrolling.cpp
     quickscrolling.h
 )
-add_library(Cutefish::ScrollingQuick ALIAS cutefish-qt-scrolling-quick)
-target_link_libraries(cutefish-qt-scrolling-quick
+add_library(ProperDesktop::ScrollingQuick ALIAS properdesktop-qt-scrolling-quick)
+target_link_libraries(properdesktop-qt-scrolling-quick
     PUBLIC
-        Cutefish::Scrolling
+        ProperDesktop::Scrolling
         Qt6::Quick
     PRIVATE
         Qt6::QuickPrivate
 )
 
-add_library(cutefish-qt-scrolling-widgets SHARED
+add_library(properdesktop-qt-scrolling-widgets SHARED
     scrollareascroller.cpp
     scrollareascroller.h
     widgetscrolling.cpp
     widgetscrolling.h
 )
-add_library(Cutefish::ScrollingWidgets ALIAS cutefish-qt-scrolling-widgets)
-target_link_libraries(cutefish-qt-scrolling-widgets
+add_library(ProperDesktop::ScrollingWidgets ALIAS properdesktop-qt-scrolling-widgets)
+target_link_libraries(properdesktop-qt-scrolling-widgets
     PUBLIC
-        Cutefish::Scrolling
+        ProperDesktop::Scrolling
         Qt6::Widgets
 )
 
 install(TARGETS
-    cutefish-qt-scrolling
-    cutefish-qt-scrolling-quick
-    cutefish-qt-scrolling-widgets
+    properdesktop-qt-scrolling
+    properdesktop-qt-scrolling-quick
+    properdesktop-qt-scrolling-widgets
     LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
 )
 
